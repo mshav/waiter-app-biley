@@ -1,0 +1,19 @@
+{
+  "name": "waiter_app",
+  "version": "1.0.0",
+  "description": "waiter webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.12.3"
+  }
+}

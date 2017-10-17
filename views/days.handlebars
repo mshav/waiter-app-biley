@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    Waiter Availability
+  </title>
+  <!-- <link type="text/css" rel="stylesheet.css" href="Css/waiter.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+h1{
+color:white;
+margin-left: 430px;
+border: solid #DC4C46 10px;
+width: 365px;
+border-radius: -1px;
+background-color:#DC4C46;
+font-family:sans-serif;
+}
+body{
+   background-color: #C1C9A6;
+}
+h4{
+  margin-left: 410px;
+ font-size: 35px;
+ opacity: 0.3;
+ font-family: sans-serif;
+ background-color: red;
+ width: 345px;
+ color:white;
+ border: solid red 10px;
+ border-radius: 5px;
+}
+.colorRed{
+ background-color: #009933;
+}
+.colorBlue{
+  background-color: #6666ff;
+}
+.colorOrange{
+background-color: #cc0000;
+}
+.fl-l
+{
+  float:left;
+  word-break: break-all;
+   width: 5%;
+   margin-left:250px;
+}
+#wrap{
+    width:auto;
+ margin:14px;
+  border:0px solid;
+ height:200px;
+  display:block;
+}
+#one {
+  background:#cc0000;
+  color:white;
+  border-radius: 4px;
+  text-align: center;
+}
+#two {
+ background:#6666ff;
+ color:white;
+ border-radius: 4px;
+ text-align: center;
+}
+#three {
+   background:#009933;
+   color:white;
+   border-radius: 4px;
+   text-align: center;
+}
+.clear{
+  margin-left: 25px;
+}
+</style>
+
+   </head>
+
+
+  <body>
+
+
+      <h1>Waiters Selected Days</h1>
+
+
+
+
+
+    <br>
+    <br>
+    <div id="wrap">
+        <div id="one" class="fl-l"> maximum</div>
+        <div id="two" class="fl-l"> less</div>
+        <div id="three" class="fl-l">enough</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form class="" action="/days" method="post">
+
+
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th style="color: #D2691E">Monday</th>
+            <th style="color: #4F84C4">Tuesday</th>
+            <th style="color: #005960">Wednesday</th>
+            <th style="color: #9C9A40">Thursday</th>
+            <th style="color: #898E8C">Friday</th>
+            <th style="color: #DC4C46">Saturday</th>
+            <th style="color: #006E51">Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+
+
+            <td class='{{colorM}}'>{{#each day1}}
+            <li style="color:white">{{this}}</li>
+            {{/each}}</td>
+
+
+            <td class="{{colorT}}">{{#each day2}}
+            <li style="color:white">{{this}}</li>
+            {{/each}}</td>
+
+
+            <td class="{{colorW}}">{{#each day3}}
+            <li style="color:white">{{this}}</li>
+            {{/each}}</td>
+
+
+            <td class="{{colorTH}}">{{#each day4}}
+            <li style="color:white">{{this}}</li>
+            {{/each}}</td>
+
+
+            <td class="{{colorF}}">{{#each day5}}
+            <li style="color:white">{{this}}</li>
+            {{/each}}</td>
+
+
+            <td class="{{colorS}}">{{#each day6}}
+            <li style="color:white">{{this}}</li>
+            {{/each}}</td>
+
+
+            <td class="{{colorSU}}">{{#each day7}}
+            <li style="color:white">{{this}}</li>
+            {{/each}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class='colorOrange'></div>
+    <div class="colorBlue"></div>
+    <div class="colorRed"></div>
+  </form>
+
+  <form class="clear" action="/clear" method="post">
+    <button type="submit" class="btn-danger" style="margin-left:40px">clear</button>
+  </form>
+
+  <br>
+  <br>
+  <br>
+  <h4 style="color:white">THANK YOU FOR YOUR DAYS</h4>
+
+
+  </body>
+</html>
